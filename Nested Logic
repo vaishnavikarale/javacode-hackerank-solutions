@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int day=sc.nextInt();
+        int month=sc.nextInt();
+        int year=sc.nextInt();
+        int day1=sc.nextInt();
+        int month1=sc.nextInt();
+        int year1=sc.nextInt();
+        int fine=0;
+        if(year<year1)
+        {fine=0;}
+        else{
+            if(year>year1)
+            {fine=10000;}
+            else if(month>month1)
+            {
+                fine=500*(month-month1);
+            }
+            else if(day>day1)
+            {
+                fine=15*(day-day1);
+            }
+        }
+        System.out.println(fine);
+    }
+}
